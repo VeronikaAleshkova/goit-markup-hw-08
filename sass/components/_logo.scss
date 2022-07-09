@@ -1,0 +1,31 @@
+.logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @include font("Raleway", 700, 26px, 0.03em, 31px, var(--accent-color));
+  text-decoration: none;
+  // font-family: "Raleway";
+  // font-weight: 700;
+  // font-size: 26px;
+  // line-height: 1.19;
+  // letter-spacing: 0.03em;
+  // color: var(--accent-color);
+  &__end--header {
+    color: var(--logoend-color-header);
+  }
+  &__end--footer {
+    color: var(--logoend-color-footer);
+  }
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+.footer__logo {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}

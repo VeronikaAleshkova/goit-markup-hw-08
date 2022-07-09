@@ -1,0 +1,22 @@
+.filters {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 15px;
+  }
+  @include tablet {
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+.filters--margin {
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
