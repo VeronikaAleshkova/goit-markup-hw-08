@@ -2,15 +2,41 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-dark-color);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-left: 61px;
+    padding-right: 74px;
+  }
+}
+
+.footer__section {
+  display: block;
+  text-align: center;
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__contacts {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.footer__addresses,
+.footer__socials {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .address-list__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 .address-list__link {
   font-style: normal;
@@ -36,11 +62,19 @@
 }
 
 .footer__socials {
-  margin-left: 70px;
+  @media screen and (max-width: 1199px) {
+    display: block;
+    text-align: center;
+  }
+
+  @include desktop {
+    margin-left: 70px;
+  }
 }
 
 .social-links__title {
   color: var(--secondary-text-color);
+  margin-bottom: 0;
 }
 
 .socials--footer {
@@ -60,12 +94,19 @@
 }
 
 .footer__subscribe {
-  margin-left: auto;
+  @media screen and (max-width: 1199px) {
+    display: block;
+    text-align: center;
+  }
+  @include desktop {
+    margin-left: auto;
+    text-align: left;
+  }
 }
 
 .subscribe {
   &__title {
-    color: var(--secondary-text-color);
+    @extend .social-links__title;
   }
 
   &__form {
@@ -82,9 +123,9 @@
 }
 
 .subscribe__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
+
   padding-left: 16px;
   color: var(--secondary-text-color);
 
@@ -92,6 +133,17 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include desktop {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .subscribe__input:focus + .subscribe__label {
@@ -105,6 +157,7 @@
 // }
 
 .modal-button {
+  display: block;
   text-align: center;
   width: 200px;
   height: 50px;

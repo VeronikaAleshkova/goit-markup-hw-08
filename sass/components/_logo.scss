@@ -1,8 +1,10 @@
 .logo {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  // padding-top: 24px;
+  // padding-bottom: 24px;
 
-  @include font("Raleway", 700, 26px, 0.03em, 31px, var(--accent-color));
+  @include font("Raleway", 700, 24px, 0.03em, 28px, var(--accent-color));
   text-decoration: none;
   // font-family: "Raleway";
   // font-weight: 700;
@@ -16,10 +18,20 @@
   &__end--footer {
     color: var(--logoend-color-footer);
   }
+
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .header__logo {
-  margin-right: 93px;
+  @include tablet {
+    margin-right: 88px;
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 
 .footer__logo {
