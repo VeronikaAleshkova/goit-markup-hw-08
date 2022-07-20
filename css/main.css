@@ -929,7 +929,7 @@ body.modal-open {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__addresses {
     margin-bottom: 60px;
   }
@@ -1385,15 +1385,7 @@ body.modal-open {
 }
 
 .checkbox__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: inline-block;
   font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -1417,6 +1409,7 @@ body.modal-open {
 }
 
 .checkbox__icon {
+  display: inline-block;
   width: 16px;
   height: 15px;
   margin-right: 7px;
