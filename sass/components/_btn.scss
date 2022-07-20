@@ -92,6 +92,10 @@
   line-height: 1.88;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @include desktop {
+    margin-top: 0;
+  }
 }
 
 .button-close {
@@ -142,13 +146,20 @@
   right: 0;
   z-index: 2;
   display: block;
-  // margin-left: auto;
   padding: 0;
   background-color: transparent;
   border: none;
+  // &.is-open {
+  //   position: fixed;
+  //   margin-top: 8px;
+  // }
 
   &__icon--cross {
     display: none;
+  }
+
+  &__icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @include tablet {
@@ -162,4 +173,14 @@
 
 .is-open .button-menu__icon--menu {
   display: none;
+}
+
+.button-menu:hover .button-menu__icon--menu,
+.button-menu:focus .button-menu__icon--menu {
+  fill: var(--accent-color);
+}
+
+.button-menu:hover .button-menu__icon--cross,
+.button-menu:focus .button-menu__icon--cross {
+  fill: var(--accent-color);
 }
